@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  example_app:
+    image: ogprogrammer/xdebug
+    volumes:
+     - ./code:/var/www
+    ports:
+     - "80:80"
+     - "443:443"
+    environment:
+      # XDebug Envs
+      #PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+      XDEBUG_CONFIG: remote_host=${OGP_XDEBUG_HOST:-10.254.254.254}
+      EN_DEV_XDEBUG_HOST: ${OGP_XDEBUG_HOST:-10.254.254.254}
