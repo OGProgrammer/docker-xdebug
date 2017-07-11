@@ -10,8 +10,7 @@ The `docker_up.sh` script uses `ifconfig` to find your IP address on your en0 or
 
 Note that if the en0 or en1 do not return an IP, it falls back to creating an alias IP address on en0 to use in the container.
 
-Basically using a bash script 
-
+Put the domain `example.local` into your `/etc/hosts` file for `127.0.0.1`
 
 ### About & other info
 
