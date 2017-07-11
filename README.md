@@ -12,6 +12,13 @@ Note that if the en0 or en1 do not return an IP, it falls back to creating an al
 
 Put the domain `example.local` into your `/etc/hosts` file for `127.0.0.1`
 
+### Enable Profiling
+
+Edit the xdebug file `files/usr/local/etc/php/conf.d/xdebug.ini` and uncomment the 3 configs under the profiling section.
+
+Rebuild the docker container with `./docker_build.sh` and then bring the container up with `./docker_up.sh`. That should build the new xdebug.ini config into the container and then run your application.
+
+The `./code/examples/profiler_outputs` directory will start to fill up with cachegrind.out files that you can open with KCacheGrind or the like.
 ### About & other info
 
 ```
