@@ -1,6 +1,9 @@
 version: '3.2'
 services:
   example_app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     image: ogprogrammer/xdebug
     volumes:
      - ./code:/var/www
@@ -8,7 +11,7 @@ services:
      - "80:80"
      - "443:443"
     environment:
-      # XDebug Envs
-      #PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+      # XDebug CLI env var
       XDEBUG_CONFIG: remote_host=${OGP_XDEBUG_HOST:-10.254.254.254}
-      EN_DEV_XDEBUG_HOST: ${OGP_XDEBUG_HOST:-10.254.254.254}
+      # My Env Var to replace the IP in the xdebug.ini config with the IP on your host machine (look at docker_up.sh)
+      OGP_XDEBUG_HOST: ${OGP_XDEBUG_HOST:-10.254.254.254}

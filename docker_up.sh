@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# This is some hacky way I get the IP address of your host machine and use that environment variable to pass through
+# to the docker container to replace the xdebug.remote_host IP address with. Otherwise, xdebug has issues getting out.
 if [[ $(ipconfig getifaddr en1) ]]; then
     export OGP_XDEBUG_HOST=$(ipconfig getifaddr en1)
 elif [[ $(ipconfig getifaddr en0) ]]; then
