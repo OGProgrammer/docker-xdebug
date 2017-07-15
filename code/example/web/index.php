@@ -4,7 +4,10 @@
         <a href="watchers.php">Watchers</a>
     </li>
     <li>
-        <a href="conditional_breakpoints.php">Conditional Breakpoints</a>
+        <a href="breakpoints.php">Conditional Breakpoints</a>
+    </li>
+    <li>
+        <a href="stack_trace.php">Stack Trace (Fatal on purpose)</a>
     </li>
 </ul>
 
@@ -14,6 +17,6 @@
         <a href="info.php">PHP Info</a>
     </li>
     <li>
-        <a href="test.php">Server Variables</a>
+        <a href="dump.php">Dump Variables</a>
     </li>
 </ul>
