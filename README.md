@@ -2,7 +2,7 @@
 
 This is a docker container that installs and using xdebug.
 
-The real trickey part is getting the correct IP address fed into the container.
+The real tricky part is getting the correct IP address fed into the container for the xdebug host ini setting.
 
 I use environment variables set from the `docker_up.sh` bash script to pass into the `docker-compose.yml` file. 
 

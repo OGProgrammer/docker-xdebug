@@ -13,4 +13,5 @@ else
 fi
 
 # Now that OGP_XDEBUG_HOST is set, lets call the docker compose up command which will use this env var.
+#docker-compose up -d --no-cache --force-recreate
 docker-compose up -d --force-recreate
